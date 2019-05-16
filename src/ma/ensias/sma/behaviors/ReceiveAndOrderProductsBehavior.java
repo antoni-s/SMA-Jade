@@ -15,7 +15,7 @@ public class ReceiveAndOrderProductsBehavior extends CyclicBehaviour {
 	public void action() {
 		ACLMessage message = receiveMessage(ACLMessage.INFORM);	
 		if (message != null) {
-			System.out.println("Received an INFORM message");
+			System.out.println("Recebeu uma mensagem INFORM");
 			Order order = generateOrderForTheProduct(message);	
 			if (order != null) sendOrder(message, order, ACLMessage.REQUEST);			
 		} else {
@@ -35,11 +35,11 @@ public class ReceiveAndOrderProductsBehavior extends CyclicBehaviour {
 	private Order generateOrderForTheProduct(ACLMessage message) {
 		try { 
 			Product product = (Product) message.getContentObject();
-			System.out.println("message content (product): " + product);
+			System.out.println("conteúdo da mensagem (produto): " + product);
 			Consumer consumer = (Consumer)myAgent;
 			int quantity = consumer.getDesiredQuantityOf(product);
-			System.out.println("Consumer " + consumer.getName() + " wants " + quantity +
-					" of " + product.getName());
+			System.out.println("Consumidor " + consumer.getName() + " quer " + quantity +
+					" do " + product.getName());
 			return new Order(product, quantity);
 		} catch(Exception e) {
 			e.printStackTrace();

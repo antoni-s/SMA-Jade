@@ -22,7 +22,7 @@ public class AdvertiseProductBehavior extends OneShotBehaviour {
 		try { message.setContentObject(product); } catch (IOException ex) {	ex.printStackTrace(); }
 		message.setOntology("commerce");
 		myAgent.send(message);	
-		System.out.println("Sent INFORM message to show my New Product");
+		System.out.println("Enviada mensagem INFORM para mostrar meu novo produto");
 	}
 	
 

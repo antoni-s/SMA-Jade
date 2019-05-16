@@ -18,10 +18,10 @@ public class MainAppli {
 		mainContainer = new MainContainer().getContainer();
 		container = new JadeContainer().getContainer();
 		producerAgent = container
-				.createNewAgent("Producteur", Producer.class.getName(), new Object[]{});
+				.createNewAgent("Produtor", Producer.class.getName(), new Object[]{});
 		
 		producerAgent.start();
 		
-		System.out.println("Created Producer : " + Producer.class.getName());
+		System.out.println("Criado Produtor : " + Producer.class.getName());
 	}
 }

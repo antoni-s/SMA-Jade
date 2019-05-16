@@ -13,7 +13,7 @@ public class Consumer extends Agent implements IConsumer {
 		addBehaviour(new OneShotBehaviour() {			
 			@Override
 			public void action() {
-				System.out.println("new Consumer agent Created !!");
+				System.out.println("Novo agente consumidor criado!!");
 			}
 		});
 		
@@ -29,23 +29,23 @@ public class Consumer extends Agent implements IConsumer {
 		return q>0 ? q:0;
 	}
 	
-	/** Consumer se permet d'utiliser son budget jusqu'à 
-	 * MAX_BUDGET * (1-rand) pour acheter produit
-	 * Qmax = La valeur de la 'Gourmandise'
+	/** Consumidor permite-se usar seu orÃ§amento atÃ© 
+	 * MAX_BUDGET * (1-rand) comprar produto
+	 * Qmax = O valor de 'Gourmandise'
 	 */
 	private int getQmax(double productPrice) {
 		return  (int)Math.round(MAX_BUDGET*(1-Math.random()) / productPrice);
 	}
 
-	/** Consumer peut ajouter jusqu'à MAX_AUGMENTATION %
-	 * Pmax = Le prix maximum que le consommateur est prêt à payer
+	/** Consumidor pode adicionar MAX_AUGMENTATION %
+	 * Pmax = O preÃ§o mÃ¡ximo que o consumidor estÃ¡ disposto a pagar
 	 */
 	private double getPmax(double productPrice) {
 		double augmentation = Math.random();
 		while (augmentation > MAX_AUGMENTATION) augmentation = Math.random();
 		return productPrice * ( 1 + augmentation );
 	}
-	
+	Le prix maximum que le consommateur est prÃªt Ã  payer
 }
 
 

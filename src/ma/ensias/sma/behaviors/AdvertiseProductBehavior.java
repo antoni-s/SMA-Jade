@@ -9,12 +9,16 @@ import jade.lang.acl.ACLMessage;
 import ma.ensias.sma.agents.Producer;
 import ma.ensias.sma.beans.Product;
 
+//Classe de comportamento
 public class AdvertiseProductBehavior extends OneShotBehaviour {
 
 	@Override
 	public void action() {
+		//Agente produtor
 		Producer producer = (Producer)myAgent;
+		//Produto/Mercadoria a ser anunciado
 		Product product = producer.getProduct();
+		//Lista de Consumidores
 		List<String> consumers = producer.getConsumersNames();
 				
 		ACLMessage message = new ACLMessage(ACLMessage.INFORM);

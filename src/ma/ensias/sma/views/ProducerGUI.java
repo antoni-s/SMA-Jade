@@ -67,7 +67,7 @@ public class ProducerGUI {
 	}
 
 	private void createConsumerHandler() {
-		System.out.println("Creating the Consumer ...");
+		System.out.println("Criando o Consumidor...");
 		try {
 			int newNumberOfCustomers = producer.createConsumer();
 			numberOfCustomersField.setText(Integer.toString(newNumberOfCustomers));		
@@ -87,11 +87,11 @@ public class ProducerGUI {
 		JPanel footerPanel = new JPanel();
 		frame.getContentPane().add(footerPanel, BorderLayout.SOUTH);
 		
-		JButton advertiseBtn = new JButton("Advertise");
+		JButton advertiseBtn = new JButton("Anunciar");
 		advertiseBtn.addActionListener(e -> advertiseProductHandler());
 		footerPanel.add(advertiseBtn);
 		
-		JButton createConsumerBtn = new JButton("Create consumer Agent");
+		JButton createConsumerBtn = new JButton("Criar agente de consumidor");
 		createConsumerBtn.addActionListener(e -> createConsumerHandler());
 		footerPanel.add(createConsumerBtn);
 		
@@ -103,7 +103,7 @@ public class ProducerGUI {
 		mainContentPanel.add(productPanel);
 		productPanel.setLayout(new GridLayout(6, 0, 0, 0));
 		
-		JLabel nameLabel = new JLabel("Name of Product");
+		JLabel nameLabel = new JLabel("Nome do produto");
 		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		productPanel.add(nameLabel);
 		
@@ -112,7 +112,7 @@ public class ProducerGUI {
 		productPanel.add(nameField);
 		nameField.setColumns(10);
 		
-		JLabel unitPriceLabel = new JLabel("Unit Price");
+		JLabel unitPriceLabel = new JLabel("Preço unitário");
 		unitPriceLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		productPanel.add(unitPriceLabel);
 		
@@ -121,7 +121,7 @@ public class ProducerGUI {
 		productPanel.add(unitPriceField);
 		unitPriceField.setColumns(10);
 		
-		JLabel unitCostLabel = new JLabel("Unit Cost");
+		JLabel unitCostLabel = new JLabel("Custo unitário");
 		unitCostLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		productPanel.add(unitCostLabel);
 		
@@ -134,7 +134,7 @@ public class ProducerGUI {
 		mainContentPanel.add(reportingPanel);
 		reportingPanel.setLayout(new GridLayout(6, 0, 0, 0));
 		
-		JLabel totalQuantitySoldLabel = new JLabel("Total Quantity Sold");
+		JLabel totalQuantitySoldLabel = new JLabel("Quantidade total vendida");
 		totalQuantitySoldLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		reportingPanel.add(totalQuantitySoldLabel);
 		
@@ -145,7 +145,7 @@ public class ProducerGUI {
 		reportingPanel.add(totalQuantitySoldField);
 		totalQuantitySoldField.setColumns(10);
 		
-		JLabel amountOfProfitLabel = new JLabel("Amount Of Profit");
+		JLabel amountOfProfitLabel = new JLabel("Quantidade de lucro");
 		amountOfProfitLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		reportingPanel.add(amountOfProfitLabel);
 		
@@ -156,7 +156,7 @@ public class ProducerGUI {
 		reportingPanel.add(amountOfProfitField);
 		amountOfProfitField.setColumns(10);
 		
-		JLabel numberOfConsumersLabel = new JLabel("Number of Consumers");
+		JLabel numberOfConsumersLabel = new JLabel("Número de Consumidores");
 		numberOfConsumersLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		reportingPanel.add(numberOfConsumersLabel);
 		

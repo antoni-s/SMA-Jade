@@ -5,11 +5,13 @@ import jade.core.behaviours.OneShotBehaviour;
 import ma.ensias.sma.beans.Product;
 import ma.ensias.sma.behaviors.ReceiveAndOrderProductsBehavior;
 
+//Classe do agente
 public class Consumer extends Agent implements IConsumer {
 	
 	@Override
 	protected void setup() {
 
+		//Constroi o behaviour
 		addBehaviour(new OneShotBehaviour() {			
 			@Override
 			public void action() {

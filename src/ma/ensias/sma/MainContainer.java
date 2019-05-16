@@ -11,14 +11,14 @@ public class MainContainer {
 	private ContainerController mainContainer;
 	
 	public MainContainer() {
-		// Créer une instance de la MV
+		// Crie uma instÃ¢ncia da VM
 		Runtime rt = Runtime.instance();		
-		// Fixer quelques propriétés
+		// Corrigir/Fixa algumas propriedades
 		Properties p = new ExtendedProperties();
-		// le GUI Jade
+		// GUI Jade
 		p.setProperty("gui", "true");
 		ProfileImpl profile = new ProfileImpl(p);
-		// créer le main container
+		// Criar container
 		mainContainer = rt.createMainContainer(profile);
 	}
 	

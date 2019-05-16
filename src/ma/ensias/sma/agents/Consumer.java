@@ -45,7 +45,7 @@ public class Consumer extends Agent implements IConsumer {
 		while (augmentation > MAX_AUGMENTATION) augmentation = Math.random();
 		return productPrice * ( 1 + augmentation );
 	}
-	Le prix maximum que le consommateur est prêt à payer
+	//Le prix maximum que le consommateur est prêt à payer
 }
 
 

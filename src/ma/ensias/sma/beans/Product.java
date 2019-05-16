@@ -28,6 +28,6 @@ public class Product implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "ProductName="+name+", UP="+unitPrice+", UC="+unitCost;
+		return "Nome do Produto="+name+", ACIMA="+unitPrice+", UC="+unitCost;
 	}
 }

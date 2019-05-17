@@ -6,7 +6,7 @@ A aplicação e desenvolvida usando o Framework JADE.
  * Um produtor (Produz um produto definido pelo usuário)
  * N consumidores
   
-### Ambiente de desenvolvimento
+### Ambiente de execução
  * Sistema Operacional Ubuntu
  * IDE Intellij
  * Java JDK 8.121
